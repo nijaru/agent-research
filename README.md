@@ -37,26 +37,13 @@ Research on SOTA agent orchestration: subagents, dynamic workflows, distributed 
 | **Vercel AI SDK 6** | GA | ToolLoopAgent, MCP first-class, 30M weekly npm |
 | **Pydantic AI v2** | Beta | Capability model, type-safe agents |
 
-### `ion/` — Source-Level Analysis
-
-Deep dives into Pi, Codex, and Claude Code internals from [ion](https://github.com/nijaru/ion):
-
-- **multi-agent-architecture** — Cross-tool comparison matrix (Pi vs Claude Code vs Codex vs Cursor vs Droid vs Amp)
-- **pi-agent-loop-deep-dive** — 742-line agent-loop.ts analysis
-- **codex-agent-loop-analysis** — Thread-based architecture, SQLite persistence
-- **claude-code-tool-execution** — Partitioned execution, permission system
-- **google-ax-runtime-review** — Distributed runtime patterns
-- **claude-code-dynamic-workflows** — Thariq's six workflow patterns
-- **rlm-dynamic-workflows** — RLM vs dynamic workflows comparison
-
 ## Key Findings
 
 1. **Script-as-plan** is the winning pattern (Claude Code, RLM, Workflow-R1 all converge here)
-2. **Git worktrees** are the multi-agent isolation primitive (everyone converged in Feb-Apr 2026)
+2. **Git worktrees** are the multi-agent isolation primitive (everyone converged Feb-Apr 2026)
 3. **Never self-evaluate** — adversarial evaluators only (Anthropic confirmed)
-4. **Hard cost budget** — nobody has it, everyone needs it
-5. **Google AX** fills the runtime gap (event log, resumption, single-writer controller)
-6. **Pi already has the best communication primitives** (intercom) — what's missing is the runtime layer
+4. **Hard cost budget** — nobody has this, everyone needs it
+5. **Classifier-gated autonomy** — Cursor auto-review, allowlist/sandbox/classify
 
 ## Current As Of
 
